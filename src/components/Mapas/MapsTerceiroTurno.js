@@ -5,7 +5,7 @@ const mapStyles = {
   map: {
     position: 'absolute',
     width: '100%',
-    height: '88%',
+    height: '91%',
   },
   stylers: [
     {
