@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css';
 
 import AddLine from './components/AddLine';
@@ -18,28 +19,29 @@ function App() {
   return (
     <Router>
       <div>
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+      <nav className="navbar navbar-expand navbar-dark bg-dark" >
           {/* <a href="/line" className="navbar-brand"> */}
           <a href="/maps" className="navbar-brand">
-            BusLine - Linhas
+            BusLine - Mapas
           </a>
-          <div className="navbar-nav mr-auto">
 
+          <div className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to={'/maps'} className="nav-link">
-              | Mapas Diurno |
+              Diurno
               </Link>
             </li>
             <li className="nav-item">
               <Link to={'/mapsnoturno'} className="nav-link">
-              | Mapas Noturno |
+              Noturno
               </Link>
             </li>
             <li className="nav-item">
               <Link to={'/mapsterceiroturno'} className="nav-link">
-              | Mapas Terceiro Turno |
+              Terceiro Turno
               </Link>
             </li>
+    
             {/* <li className="nav-item">
               <Link to={'/line'} className="nav-link">
               | Linhas Diurno |
@@ -61,8 +63,9 @@ function App() {
               </Link>
             </li> */}
           </div>
+          
         </nav>
-        <div className="container mt-3">
+        <div >
           <Switch>
             {/* <Route exact path={['/', '/line']} component={LineList} /> */}
             <Route exact path={['/', '/maps']} component={Maps} />
