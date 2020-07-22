@@ -19,29 +19,30 @@ function App() {
   return (
     <Router>
       <div>
-      <nav className="navbar navbar-expand navbar-dark bg-dark" >
-          {/* <a href="/line" className="navbar-brand"> */}
-          <a href="/maps" className="navbar-brand">
-            BusLine - Mapas
-          </a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="/maps">BusLine - Mapas</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-          <div className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <Link to={'/maps'} className="nav-link">
-              Diurno
+          <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto">
+              <li className="nav-item">
+                <Link to={'/maps'} className="nav-link">
+                  Diurno
               </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={'/mapsnoturno'} className="nav-link">
-              Noturno
+              </li>
+              <li className="nav-item">
+                <Link to={'/mapsnoturno'} className="nav-link">
+                  Noturno
               </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={'/mapsterceiroturno'} className="nav-link">
-              Terceiro Turno
+              </li>
+              <li className="nav-item">
+                <Link to={'/mapsterceiroturno'} className="nav-link">
+                  Terceiro Turno
               </Link>
-            </li>
-    
+              </li>
+            </ul>
             {/* <li className="nav-item">
               <Link to={'/line'} className="nav-link">
               | Linhas Diurno |
@@ -63,7 +64,6 @@ function App() {
               </Link>
             </li> */}
           </div>
-          
         </nav>
         <div >
           <Switch>
@@ -82,7 +82,7 @@ function App() {
 
             <Route path="/mapsnoturno" component={MapsNoturno} />
             <Route path="/mapsterceiroturno" component={MapsTerceiroTurno} />
-            
+
             {/* <Route path="/lineNoturno/:id" component={LineNoturno} />
             <Route path="/lineTerceiroTurno/:id" component={LineTerceiroTurno} /> */}
           </Switch>
